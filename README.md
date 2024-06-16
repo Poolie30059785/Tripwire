@@ -1,9 +1,7 @@
 # INFO #
 This is a Fork Clone of repo from [Bitbucket](https://bitbucket.org/daimian/tripwire/branch/production)
 
-Some things have changed, read carefully - also Docker has some isssues yet, recommend not using it or helping solve the issues.
-
-The landing page twitter feed won't work since the one I used requires a private token, I will have to find a new way to do it later.
+I have forked this to ellaborate on setup guide and hosting both Tripwire and Alliance Auth via same VPS.
 
 ### Tripwire - EVE Online wormhole mapping web tool ###
 
@@ -23,6 +21,11 @@ Requirements:
 
 Setup:
 
+* mkdir docker
+* cd docker
+* apt-get install mysql-server
+* apt-get install php-mbstring
+  
 * Create a `tripwire` database using the export located in `.docker/mysql/tripwire.sql`
 * Create an EVE dump database, define it's name later in `config.php`. Download from: https://www.fuzzwork.co.uk/dump/ To download the latest use the following link: https://www.fuzzwork.co.uk/dump/mysql-latest.tar.bz2
 * Clone the Tripwire repo to where you are going to serve to the public OR manually download repo and copy files yourself
